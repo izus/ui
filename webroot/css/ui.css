@@ -1,0 +1,67 @@
+/**
+ * UI Plugin styles and overrides
+ * 
+ * @author Izus www.izus.com.ar
+ * 
+ */
+
+
+
+/**
+ * 	Search element
+ */
+
+.form-ui-search{
+	margin: 0;
+}
+#advanced-search legend{
+	padding-top: 0;
+}
+
+.search-toolbar {
+	margin: 10px 0;
+}
+.total-results {
+	display: inline-block;
+	padding: 2px 0 0 15px;	
+	color: #999999;
+}
+
+
+/* globalnav user */
+	.dropdown-menu-login{
+		min-width: 200px;
+	}
+	.user-data{
+		color: #333;
+		padding-top: 10px;
+		position: relative;		
+		padding: 3px 20px;
+	}
+	#globalnav-login-username{
+		display: block;
+		font-weight: bold;
+		margin-left: 40px;
+		padding-top: 4px;
+		margin-bottom: 0;	
+	}
+	#globalnav-login-role{
+		display: block;
+		color: #999999;
+		font-size: 12px;
+		margin-left: 40px;
+	}
+	.avatar{
+		position: absolute;
+		top: 10px;
+		left: 20px;
+		width: 32px;
+		height: 32px;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		border-radius: 4px;
+	}
+
+	.navbar .divider-vertical {
+		height: 44px;
+	}

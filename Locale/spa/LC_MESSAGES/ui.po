@@ -1,0 +1,161 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Ui Plugin\n"
+"POT-Creation-Date: 2013-02-22 13:33-0300\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Martin <martin.salinas@izus.com.ar>\n"
+"Language-Team: Izus <admin@izus.com.ar>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-Language: Spanish\n"
+"X-Poedit-Country: Argentina\n"
+
+#: Plugin/Ui/View/Elements/actions-menu.ctp:35
+msgid "Move Up"
+msgstr "Mover arriba"
+
+#: Plugin/Ui/View/Elements/actions-menu.ctp:36
+msgid "Move Down"
+msgstr "Mover abajo"
+
+#: Plugin/Ui/View/Elements/block.ctp:14
+#: Plugin/Ui/View/Elements/gallery/items.ctp:111
+msgid "Edit"
+msgstr "Editar"
+
+#: Plugin/Ui/View/Elements/quicksearch.ctp:9;23;34;56
+msgid "Search"
+msgstr "Buscar"
+
+#: Plugin/Ui/View/Elements/quicksearch.ctp:29;52
+msgid "Advanced search"
+msgstr "Búsqueda avanzada"
+
+#: Plugin/Ui/View/Elements/quicksearch.ctp:40;57
+msgid "Remove filters"
+msgstr "Remover filtros"
+
+#: Plugin/Ui/View/Elements/quicksearch.ctp:40
+msgid "record found"
+msgid_plural "records found"
+msgstr[0] "registro encontrado"
+msgstr[1] "registros encontrados"
+
+#: Plugin/Ui/View/Elements/gallery/items.ctp:39
+msgid "Gallery"
+msgstr "Galería"
+
+#: Plugin/Ui/View/Elements/gallery/items.ctp:70
+msgid "Note: to make reordering effective, you must save changes"
+msgstr "Nota: al cambiar el orden se deben guardar los cambios"
+
+#: Plugin/Ui/View/Elements/gallery/items.ctp:110
+msgid "View original size"
+msgstr "Ver en tamaño original"
+
+#: Plugin/Ui/View/Elements/gallery/items.ctp:112;168
+msgid "Mark for deletion"
+msgstr "Marcar para eliminar"
+
+#: Plugin/Ui/View/Elements/gallery/items.ctp:125
+msgid "Marked for deletion"
+msgstr "Marcada para eliminar"
+
+#: Plugin/Ui/View/Elements/gallery/items.ctp:133
+msgid "Edit Image"
+msgstr "Editar imagen"
+
+#: Plugin/Ui/View/Elements/gallery/items.ctp:137
+msgid "You must save changes"
+msgstr "Se deben enviar los cambios para que surjan efecto"
+
+#: Plugin/Ui/View/Elements/gallery/items.ctp:154;171
+msgid "Close"
+msgstr "Cerrar"
+
+#: Plugin/Ui/View/Elements/gallery/items.ctp:163
+msgid "Delete Image"
+msgstr "Eliminar"
+
+#: Plugin/Ui/View/Elements/gallery/items.ctp:166
+msgid "The image will be marked for deletion. This will be done only if changes are saved."
+msgstr "La imagen será marcada para eliminar. Una vez guardados los cambios se realizará la eliminación"
+
+#: Plugin/Ui/View/Elements/gallery/items.ctp:187
+msgid "Add Images"
+msgstr "Agregar imágenes"
+
+#: Plugin/Ui/View/Elements/gallery/items.ctp:218
+msgid "Add another image"
+msgstr "Agregar otra imagen"
+
+#: Plugin/Ui/View/Helper/UiHelper.php:48
+msgid "Yes"
+msgstr "Sí"
+
+#: Plugin/Ui/View/Helper/UiHelper.php:48
+msgid "No"
+msgstr "No"
+
+#: Plugin/Ui/View/Helper/UiHelper.php:52
+msgid "None"
+msgstr "Ninguno"
+
+#: Plugin/Ui/View/Helper/UiHelper.php:138
+msgid "today"
+msgstr "hoy"
+
+#: Plugin/Ui/View/Helper/UiHelper.php:138
+msgid "the same day"
+msgstr "el mismo día"
+
+#: Plugin/Ui/View/Helper/UiHelper.php:140
+msgid "tomorrow"
+msgstr "mañana"
+
+#: Plugin/Ui/View/Helper/UiHelper.php:140
+msgid "the next day"
+msgstr "el día siguiente"
+
+#: Plugin/Ui/View/Helper/UiHelper.php:142;146
+msgid "yesterday"
+msgstr "ayer"
+
+#: Plugin/Ui/View/Helper/UiHelper.php:142
+msgid "the day before"
+msgstr "el día anterior"
+
+#: View/AppUsers/admin_index.ctp:22
+msgid "All roles"
+msgstr "Todos los roles"
+
+#: View/AppUsers/admin_view.ctp:9
+#: View/AppUsers/view.ctp:7
+#: View/Appointments/admin_view.ctp:9
+#: View/Calls/admin_view.ctp:9
+#: View/News/admin_view.ctp:9
+#: View/Requests/admin_view.ctp:9
+msgid "General"
+msgstr ""
+
+#: View/AppUsers/admin_view.ctp:53
+#: View/Appointments/admin_view.ctp:53
+#: View/Calls/admin_view.ctp:45
+#: View/News/admin_view.ctp:33
+#: View/Requests/admin_view.ctp:113
+msgid "Metadata"
+msgstr ""
+
+#: View/AppUsers/admin_view.ctp:90
+#: View/Appointments/admin_view.ctp:90
+#: View/Calls/admin_view.ctp:82
+#: View/News/admin_view.ctp:70
+#: View/Requests/admin_view.ctp:150
+msgid "More actions"
+msgstr "Más acciones"
+
+#~ msgid "Any"
+#~ msgstr "Cualquiera"
