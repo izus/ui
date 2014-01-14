@@ -1,5 +1,5 @@
 {
-        "name": "izus/ui-plugin",
+        "name": "izus/Ui",
         "description": "A bunch of useful front-end features and formatting utilities",
         "type": "cakephp-plugin",
         "require": {
