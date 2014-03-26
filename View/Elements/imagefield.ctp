@@ -101,10 +101,10 @@ $filename = $data[$field_name];
 			<div class="span4 img-thumb">
 				<?php echo $this->Html->link(
 								$this->Html->image(
-									'/'.$image_location.$data[$fields['dir']].'/'. $filename,
+									$image_location.$data[$fields['dir']].'/'. $filename,
 									array('class'=>'img-polaroid')
 								), 
-								'/'.$image_location.$data[$fields['dir']].'/'. $filename,
+								$image_location.$data[$fields['dir']].'/'. $filename,
 								array('escape' => false)
 							);
 				?>
