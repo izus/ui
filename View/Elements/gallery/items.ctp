@@ -15,13 +15,13 @@ if(empty($itemModel))   $itemModel = array();
 if(empty($parentModel)) $parentModel = array();
 $defaults = array(
 	'itemModel' => array(
-		'name' => 'Image',
-		'file_field' => 'image_filename', 
-		'meta_fields' => array(
-			'dir'      => 'image_dir',
-			'mimetype' => 'image_mimetype',
-			'filesize' => 'image_filesize'
-		),
+			'name'        => 'Image',
+			'file_field'  => 'image_filename', 
+			'meta_fields' => array(
+				'dir'         => 'image_dir',
+				'mimetype'    => 'image_mimetype',
+				'filesize'    => 'image_filesize'
+			),
 		'order_field' => 'order', 
 		'edit_fields' => array(
 			// 'title',
@@ -30,15 +30,15 @@ $defaults = array(
 		),
 	),
 	'parentModel' => array(
-		'id' => null,
+		'id'          => null,
 		'foreign_key' => null,
-		'name' => null,
+		'name'        => null,
 	),
 	'options' => array(
-		'gallery' => $is_edit,
-		'add' => $is_add,
-		'legend' => __d('ui', 'Gallery'),
-		'image_span' => 3,
+		'gallery'        => $is_edit,
+		'add'            => $is_add,
+		'legend'         => __d('ui', 'Gallery'),
+		'image_span'     => 3,
 	),
 );
 
@@ -57,9 +57,12 @@ if(!empty($parentModel['name']) && empty($parentModel['foreign_key'])) {
 	}
 }
 
+if(empty($itemModel['meta_fields']['image_location'])) $itemModel['meta_fields']['image_location'] = '/' ;
+
 $itemModel = array_merge($defaults['itemModel'], @$itemModel);
 $parentModel = array_merge($defaults['parentModel'], @$parentModel);
 $options = array_merge($defaults['options'], @$options);
+//die(pr($itemModel));
 ?>
 
 <fieldset class="images image-gallery">
@@ -85,15 +88,15 @@ $options = array_merge($defaults['options'], @$options);
 			<div class="handle">::::::::</div>
 		</div>
 		<div class="thumbnail">
-			<?php 
-			$field_dir  = $itemModel['meta_fields']['dir'];
-			$field_file = $itemModel[ 'file_field' ];
-			$dir        = $item[ $field_dir ];
-			$file       = $item[ $field_file ];
-			$original_path = $dir .             '/' . $file;
+			<?php
+			$field_dir     = $itemModel['meta_fields']['dir'];
+			$field_file    = $itemModel['file_field'];
+			$dir           = $itemModel['meta_fields']['image_location'].$item[ $field_dir ];
+			$file          = $item[ $field_file ];
+			$original_path = $dir . 			'/' . $file;
 			$large_path    = $dir . '/thumb/large/' . $file;
 			$small_path    = $dir . '/thumb/small/' . $file;
-			
+			//die(pr($defaults['options']['image_location'].$original_path));
 			$img_opts = array();
 			
 			// si hay thumb muestro el thumb, sino la imagen original
@@ -142,14 +145,15 @@ $options = array_merge($defaults['options'], @$options);
 					<?php 	endforeach; ?>
 					<?php endif; ?>
 					<?php echo $this->element('Ui.imagefield', array(
-									'show_thumb'    => true,
-									'data'		    => $item,
-									'model'		    => $itemModel['name'],
-									'field_name'    => $field_file,
-									'fields'        => $itemModel['meta_fields'],
-									'fields_prefix' => $itemModel['name'].".$i.",
+									'show_thumb'      => true,
+									'data'            => $item,
+									'model'           => $itemModel['name'],
+									'field_name'      => $field_file,
+									'fields'          => $itemModel['meta_fields'],
+									'fields_prefix'   => $itemModel['name'].".$i.",
 									//'fields_prefix' => $i.'.',
-									'label'    	    => Inflector::humanize($field_file),
+									'label'           => Inflector::humanize($field_file),
+									'image_location'  => 'files/image/',
 					)); ?>
 				</fieldset>
 			</div>
@@ -192,7 +196,7 @@ $options = array_merge($defaults['options'], @$options);
 		<div id="gallery-add-images-<?php echo $gallery_id; ?>" class="collapse<?php if(empty($this->request->data[ $itemModel['name'] ] )){echo ' in';} ?>">
 	
 			<?php unset($this->request->data[ $itemModel['name'] ]); // esto es importante! sino, el template podría quizás prepopulado! ?>
-	
+			
 			<!--<div class="alert alert-info">Puede agregar hasta 10 imagenes por vez. Los formatos admitidos son: jpg, png y gif, de un peso máximo de 2MB.</div>-->
 			<table cellpadding="0" cellspacing="0" class="table table-bordere table-striped" id="table-add-images">
 				<thead>
@@ -239,4 +243,3 @@ $options = array_merge($defaults['options'], @$options);
 	</div>
 <?php endif; ?>
 </fieldset>
-

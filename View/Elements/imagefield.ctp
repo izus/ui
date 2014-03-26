@@ -54,6 +54,8 @@ $max_upload_legend = 'Nota: El servidor no permite subir archivos que superen lo
 
 if(empty($field_name)) $field_name = 'filename';
 
+if(empty($image_location)) $image_location = '/';
+
 $prefix = substr($field_name, 0, strpos($field_name, '_'));
 
 // file input options
@@ -72,9 +74,9 @@ if(!empty($help_block)){
 
 if(empty($fields)) {
 	$fields = array(
-		'dir' 		=> $prefix.'_dir',
-		'filesize'	=> $prefix.'_filesize',
-		'mimetype' 	=> $prefix.'_mimetype',
+		'dir'            => $prefix.'_dir',
+		'filesize'       => $prefix.'_filesize',
+		'mimetype'       => $prefix.'_mimetype',
 	);
 }
 
@@ -94,16 +96,15 @@ $filename = $data[$field_name];
 <div class="control-group">
 	<label for="<?php echo Inflector::camelize($field_name); ?>" class="control-label"><?php echo (empty($label)) ? __(Inflector::humanize($field_name)) : $label; ?></label>
 	<div class="controls">
-		
 		<div class="row-fluid">
 			<?php if($show_thumb): ?>
 			<div class="span4 img-thumb">
 				<?php echo $this->Html->link(
 								$this->Html->image(
-									'/'.$data[$fields['dir']].'/'. $filename,
+									'/'.$image_location.$data[$fields['dir']].'/'. $filename,
 									array('class'=>'img-polaroid')
 								), 
-								'/'.$data[$fields['dir']].'/'. $filename,
+								'/'.$image_location.$data[$fields['dir']].'/'. $filename,
 								array('escape' => false)
 							);
 				?>
