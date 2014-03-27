@@ -153,7 +153,7 @@ $options = array_merge($defaults['options'], @$options);
 									'fields_prefix'   => $itemModel['name'].".$i.",
 									//'fields_prefix' => $i.'.',
 									'label'           => Inflector::humanize($field_file),
-									'image_location'  => 'files/image/',
+									'image_location'  => $itemModel['meta_fields']['image_location'],
 					)); ?>
 				</fieldset>
 			</div>
