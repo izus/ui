@@ -1,4 +1,4 @@
-<?
+<?php
 $_defaults = array(
 	'view' => true,
 	'edit' => true,
